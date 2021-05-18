@@ -1,0 +1,59 @@
+doctype html
+head
+  meta(charset='utf-8')
+  link(rel='stylesheet' type='text/css' href='/styles/contact.css')
+  meta(content='width=width-device, user-scalable=yes initial-scale=1.0' name='viewport')
+  title :: Contact ::
+#container
+  header
+    nav
+      ul
+        li
+          a.home(href='/home') Home
+        li
+          a.services(href='/services') Our Services
+        li
+          a.contact(href='/contact') Contact Us
+  section
+    article
+      form#form1(action='' method='' enctype='' name='')
+        fieldset
+          legend Contact
+          ol
+            li
+              label(for='name') Name : 
+              input#name(type='text' name='name' placeholder='First Name & Last Name' required='true' size='30')
+              p
+                label
+                  input#mr(type='radio' name='civil')
+                  | Mr
+                label
+                  input#me(type='radio' name='civil')
+                  | Mme
+                label
+                  input#melle(type='radio' name='civil')
+                  | Miss
+            p
+              li
+                label(for='email') E-mail
+                input#emai(type='email' name='email' placeholder='exemple@donaime.com' required='true' size='30')
+              li
+                label(for='tel') Phone : 
+                input#tel(type='tel' name='tel' size='30' required='true' pattern='[0-9]{8}')
+              li
+                label(for='adresse') Address : 
+                input#adresse(type='text' name='adresse' size='30' required='true')
+              li
+                label(for='cp') Postal Code : 
+                input#cp(type='text' name='cp' size='30' required='true' pattern='[0-9]{4}')
+              li
+                label(for='ville') City : 
+                input#ville(type='text' name='ville' size='30' required='true')
+              li
+                label(for='renseignements') Renseignements
+                textarea#renseignements(name='renseignements' rows='4' cols='30' required='')
+        center
+          input(type='submit' value='Submit')
+          input(type='submit' value='Cancel')
+  footer &copy; - Meayan Kays - 2021
+  br.annule
